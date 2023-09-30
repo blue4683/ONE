@@ -223,6 +223,22 @@ struct PoolParams
   float float_activation_max;
 };
 
+struct SoftmaxParams
+{
+  float beta;
+  int32_t input_multiplier;
+  int32_t input_left_shift;
+  int diff_min;
+  int num_rows;
+  int row_size;
+};
+
+struct QuantizationParams
+{
+  float scale;
+  int zero_point;
+};
+
 } // namespace luci_interpreter_pal
 
 #endif // LUCI_INTERPRETER_PAL_PARAMS_H
